@@ -1,0 +1,13 @@
+Hello there.
+Let's write a few lines of text to the file text.txt:
+0 A wonderful line of text.
+1 A wonderful line of text.
+2 A wonderful line of text.
+3 A wonderful line of text.
+4 A wonderful line of text.
+5 A wonderful line of text.
+6 A wonderful line of text.
+7 A wonderful line of text.
+8 A wonderful line of text.
+9 A wonderful line of text.
+End of file.
