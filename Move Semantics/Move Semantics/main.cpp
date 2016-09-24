@@ -53,6 +53,13 @@ public:
 	Test& operator=(Test &&t_other)
 	{
 		std::cout << "Move assignment operator.\n";
+		if (this != &t_other)
+		{
+			delete[] m_buffer;
+			m_buffer = t_other.m_buffer;
+			t_other.m_buffer = nullptr;
+		}
+		return *this;
 	}
 	
 	~Test()
@@ -78,10 +85,13 @@ Test get_test_object()
 
 int main()
 {
-	Test test = get_test_object();
-
+	// move constructor
 	std::vector<Test> test_objects;
 	test_objects.push_back(Test{});
+
+	// move assignment
+	Test test;
+	test = get_test_object();
 
 	return 0;
 }
